@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
   --color-light-white: #fff;
 }
@@ -345,7 +345,6 @@ nav {
   grid-auto-flow: column;
   grid-template-columns: repeat(3, 1fr);
   /*  */
-  padding: 2.4rem 8rem;
 
   /* background-color: red; */
   grid-column-gap: 2.4rem;
@@ -425,8 +424,6 @@ nav {
 .section__card {
   display: grid;
   row-gap: 2.4rem;
-
-  padding: 2.4rem 8rem;
 }
 
 .section__card-container {
@@ -434,8 +431,11 @@ nav {
 
   display: grid;
   column-gap: 4rem;
+
+  justify-content: space-around;
   /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-columns: repeat(3, minmax(300px, 30%));
+  /* grid-template-columns: repeat(3, minmax(300px, 30%)); */
+  grid-template-columns: repeat(3, minmax(300px, 25%));
   grid-auto-flow: column;
   grid-template-rows: auto;
 }
@@ -450,9 +450,9 @@ nav {
 
 .section__card-item {
   display: grid;
-  grid-template-rows: 25rem auto;
+  grid-template-rows: auto auto;
 
-  row-gap: 1.6rem;
+  /* row-gap: 1.6rem; */
 
   /* display: flex; */
   /* flex-direction: column; */
@@ -469,6 +469,8 @@ nav {
   width: 100%;
   border-radius: 30px;
   overflow: hidden;
+
+  max-height: 230px;
 }
 
 .card-item__image img {
@@ -485,6 +487,7 @@ nav {
   font-size: 1.8rem;
 
   gap: 0.8rem;
+  letter-spacing: 2px;
 }
 
 .price {
@@ -494,24 +497,22 @@ nav {
 }
 
 .card-item__info {
-  font-size: 2.4rem;
-  letter-spacing: 2px;
 }
 
 .card-item__info-heading {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .course__update {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   /*  */
   position: relative;
 }
 
-.course__update::after {
+/* .course__update::after {
   content: "";
 
   position: absolute;
@@ -522,7 +523,7 @@ nav {
   bottom: -100%;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 .course__update svg {
   width: 10%;
@@ -542,10 +543,23 @@ nav {
 /*  */
 .card-item__action {
   align-self: flex-end;
-  padding: 2.4rem 0;
+  /* padding: 0.8rem 0; */
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.card-item__action span {
+  font-size: 1.6rem;
+}
+
+/* dive__into */
+.dive__into {
+  width: 8%;
+}
+
+.dive__into svg {
+  width: 100%;
 }
 
 .rating {
@@ -564,7 +578,7 @@ nav {
 }
 
 .star__ratings label {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   padding: 0.1rem;
   color: #a7c4bc;
   cursor: pointer;
@@ -578,6 +592,262 @@ input:not(:checked) ~ label:hover {
 
 input:checked ~ label {
   color: #ff9529;
+}
+
+/* button */
+.btn__all-courses {
+  font-size: 1.8rem;
+  background-color: #5a60ce;
+  color: #fff;
+  grid-row: 3;
+  margin: 3rem 0;
+  justify-self: center;
+  padding: 1.6rem 2.4rem;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0px 2px 8px -2px hsla(237, 54%, 20%, 0.685);
+}
+
+/* slider section */
+.section__slider {
+  background-color: #5a60ce;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*  */
+  position: relative;
+  overflow: hidden;
+}
+
+.placement {
+  position: absolute;
+
+  width: 15%;
+}
+
+.placement svg {
+  width: 100%;
+}
+
+.placement-1 {
+  right: 0;
+  top: -25%;
+}
+
+.placement-2 {
+  bottom: -25%;
+  left: -5%;
+}
+
+.section__slider-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__heading {
+  color: #fff;
+  font-size: 4rem;
+}
+
+.section__slider-description p {
+  max-width: 60%;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #fff;
+  font-family: roboto;
+}
+
+.mySlide__content {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.tutor__description {
+  background-color: #9a9cce;
+  width: 100%;
+  padding: 1.6rem;
+
+  /*  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tutor__description span {
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+/* news letter */
+.section__newsletter,
+.section__card,
+.section__description,
+.section__footer {
+  padding: 2.4rem 8rem;
+}
+
+.section__newsletter {
+  min-height: 35vh;
+
+  /*  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsLetter__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.newsLetter__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsLetter__heading {
+  font-size: 3.4rem;
+}
+
+.newsLetter__description p {
+  width: 80%;
+  text-align: center;
+  font-family: roboto;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.newsLetter-main__box {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  border-radius: 30px;
+  /* overflow: hidden; */
+}
+
+.newsLetter-main__box input {
+  flex: 1;
+}
+.newsLetter-main__box input,
+.newsLetter-main__box .btn-subscribe {
+  font-size: 1.8rem;
+  padding: 1.6rem 2.4rem;
+  outline: none;
+  background: transparent;
+  border: none;
+  /* padding-left: 1.4rem; */
+  border-radius: 30px;
+}
+
+.newsLetter-main__box .btn-subscribe {
+  background: #5a60ce;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  min-width: 30%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.newsLetter-main__box .btn-subscribe:hover,
+.newsLetter-main__box .btn-subscribe:active {
+  background: hsl(237, 54%, 48%);
+}
+
+.newsLetter-main__box input::placeholder {
+  font-style: italic;
+  font-weight: 100;
+  color: rgba(49, 49, 49, 0.5);
+}
+
+/* footer */
+.section__footer {
+  /* margin: 0 auto; */
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__footer-content {
+  width: 100%;
+  max-width: 1200px;
+  border-top: 3px solid #5a60ce;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2.4rem 0;
+}
+
+.links__container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social__links,
+.usefull__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.usefull__links {
+  padding-left: 5rem;
+}
+
+.usefull__links a {
+  font-size: 1.8rem;
+  padding: 0.8rem 1.6rem;
+}
+
+.social__links {
+  justify-content: flex-end;
+}
+
+.social__links a {
+  /* background-color: blue; */
+  /* display: block; */
+  /* width: 20%; */
+  padding: 0.8rem 1.6rem;
+}
+
+.social__links a:last-child {
+  padding-right: 0;
+}
+
+.social__links a svg {
+  /* width: 100%; */
+}
+
+/* footer */
+.footer__text {
+  background-color: #5a60ce;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 
 @media (max-width: 1300px) {
@@ -600,12 +870,19 @@ input:checked ~ label {
   }
 }
 
+@media (max-width: 1250px) {
+  .links__container {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
 @media (max-width: 1140px) {
   .section__description,
   .section__card-container {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-flow: row;
-    row-gap: 2.4rem;
+    row-gap: 4rem;
   }
 
   .section__descrition-card-3 a {
@@ -630,6 +907,10 @@ input:checked ~ label {
 
   .course__update::after {
     bottom: -100%;
+  }
+
+  .section__slider-description p {
+    max-width: 70%;
   }
 }
 
@@ -737,17 +1018,12 @@ input:checked ~ label {
   .section__description,
   .section__card-container {
     grid-auto-flow: row;
-    row-gap: 2.4rem;
+    /* row-gap: 2.4rem; */
   }
 
   .section__description {
+    row-gap: 0.8rem;
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .section__card-container {
-    grid-template-columns: repeat(1, minmax(200px, 450px));
-    justify-content: center;
-    row-gap: 4rem;
   }
 
   .btn-courses {
@@ -758,6 +1034,34 @@ input:checked ~ label {
   /* can be changed */
   .section__description {
     margin-top: 15rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .section__footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links__container {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 900px) {
+  .section__card-container {
+    grid-template-columns: repeat(1, minmax(200px, 450px));
+    justify-content: center;
+    row-gap: 4rem;
+  }
+
+  .section__slider-description p {
+    max-width: 100%;
+  }
+
+  .usefull__links {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
   }
 }
 
@@ -789,6 +1093,33 @@ input:checked ~ label {
   .btn-courses {
     margin-top: -1rem;
   }
+
+  .newsLetter-main__box {
+    width: auto;
+  }
+
+  .links__container {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.6rem;
+  }
+
+  .usefull__links {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .usefull__links a {
+    padding: 0.8rem 0rem;
+  }
+
+  .social__links {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 500px) {
@@ -807,6 +1138,10 @@ input:checked ~ label {
   .nav-nav {
     padding-right: 2.4rem;
   }
+
+  .newsLetter__heading {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 400px) {
@@ -822,7 +1157,7 @@ input:checked ~ label {
     max-width: 100%;
   }
 
-  .course__update {
+  /* .course__update {
     flex-direction: column;
   }
 
@@ -834,5 +1169,48 @@ input:checked ~ label {
     bottom: -36%;
     left: 0;
     transform: translateX(0);
+  } */
+
+  .newsLetter__description {
+    gap: 0.8rem;
+  }
+
+  .newsLetter__heading {
+    font-size: 2.4rem;
+  }
+
+  .newsLetter__description p {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+  .newsLetter-main__box {
+    width: 100%;
+  }
+
+  .newsLetter-main__box {
+    flex-direction: column;
+    background-color: transparent;
+    gap: 1.6rem;
+  }
+
+  .newsLetter-main__box input {
+    width: 100%;
+    background-color: #e5e5e5;
+  }
+
+  .newsLetter-main__box .btn-subscribe {
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-item__info-heading,
+  .price {
+    letter-spacing: 0;
+  }
+
+  .section__card-heading {
+    font-size: 3.4rem;
   }
 }
