@@ -338,6 +338,28 @@ nav {
   pointer-events: none;
 }
 
+/* section intro */
+.main__des {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 3rem; */
+
+  margin-top: -8rem;
+}
+
+.main__des-heading {
+  font-size: 4rem;
+  font-weight: 300;
+
+  text-align: center;
+  max-width: 75%;
+}
+.main__des span {
+  color: #5a60ce;
+}
+
 /* section description */
 
 .section__description {
@@ -875,6 +897,16 @@ input:checked ~ label {
     flex-direction: column;
     align-items: flex-end;
   }
+
+  .main__des-heading {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main__des {
+    margin-top: 0rem;
+  }
 }
 
 @media (max-width: 1140px) {
@@ -1035,6 +1067,14 @@ input:checked ~ label {
   .section__description {
     margin-top: 15rem;
   }
+
+  .section__description {
+    margin-top: 0;
+  }
+
+  .main__des {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 950px) {
@@ -1045,6 +1085,33 @@ input:checked ~ label {
 
   .links__container {
     align-self: flex-end;
+  }
+
+  .links__container {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.6rem;
+  }
+
+  .usefull__links {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .usefull__links a {
+    padding: 0.8rem 0rem;
+  }
+
+  .social__links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main__des-heading {
+    font-size: 3.4rem;
   }
 }
 
@@ -1057,11 +1124,6 @@ input:checked ~ label {
 
   .section__slider-description p {
     max-width: 100%;
-  }
-
-  .usefull__links {
-    /* flex-direction: column; */
-    flex-wrap: wrap;
   }
 }
 
@@ -1086,6 +1148,7 @@ input:checked ~ label {
   }
 
   .intro__image {
+    display: none;
     position: static;
     width: 100%;
   }
@@ -1096,29 +1159,6 @@ input:checked ~ label {
 
   .newsLetter-main__box {
     width: auto;
-  }
-
-  .links__container {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-
-    gap: 1.6rem;
-  }
-
-  .usefull__links {
-    padding-left: 0;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .usefull__links a {
-    padding: 0.8rem 0rem;
-  }
-
-  .social__links {
-    width: 100%;
-    justify-content: center;
   }
 }
 
@@ -1213,4 +1253,9 @@ input:checked ~ label {
   .section__card-heading {
     font-size: 3.4rem;
   }
+}
+
+/* animate style class */
+.lazy-section {
+  filter: blur(20px);
 }
