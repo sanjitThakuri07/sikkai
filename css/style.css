@@ -192,12 +192,17 @@ nav {
     rgba(255, 255, 255, 0.849),
     rgba(90, 96, 206, 0.767) 10%
   ); */
-  background: -webkit-linear-gradient(
+  /* background: -webkit-linear-gradient(
     left,
     #5a60cec4 0%,
     #2989d8 30%,
     #7db9e8 100%,
     #207cca 0%
+  ); */
+  background: linear-gradient(
+    to right,
+    /* rgba(90, 96, 206, 0.3), */ rgba(90, 96, 206, 0.6),
+    rgba(90, 96, 206, 0.3)
   );
   border-radius: 30px;
   color: #fff;
@@ -872,6 +877,11 @@ input:checked ~ label {
   font-weight: 300;
 }
 
+/* mobile__actions */
+.mobile__actions {
+  display: none;
+}
+
 @media (max-width: 1300px) {
   .card-item__info-heading,
   .price {
@@ -1074,6 +1084,11 @@ input:checked ~ label {
 
   .main__des {
     margin-top: 0;
+  }
+
+  /* mobile__actions */
+  .mobile__actions {
+    display: flex;
   }
 }
 
