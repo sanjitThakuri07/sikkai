@@ -2,6 +2,17 @@ const moveDownBtn = document.querySelector(".btn-move__down");
 
 const section = document.querySelector(".main__des-heading");
 
+const checkBox = document.querySelector("#check");
+
+console.log(checkBox);
+checkBox.addEventListener("click", function (e) {
+  if (checkBox.checked) {
+    return document.body.classList.add("overflow");
+  }
+  document.body.classList.remove("overflow");
+  // console.log();
+});
+
 moveDownBtn.addEventListener("click", function (e) {
   e.preventDefault();
 

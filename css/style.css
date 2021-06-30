@@ -237,7 +237,8 @@ nav {
 /* overlay */
 .overlay {
   position: fixed;
-  top: 0;
+  /* top: 0; */
+  top: 13%;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -245,6 +246,9 @@ nav {
   display: none;
 
   z-index: 10;
+
+  /*  */
+  top: 9.9rem !important;
 }
 
 /* section intro */
@@ -882,6 +886,15 @@ input:checked ~ label {
   display: none;
 }
 
+.overflow {
+  overflow: scroll;
+}
+
+/* update */
+.nav__list-container {
+  width: 80%;
+}
+
 @media (max-width: 1300px) {
   .card-item__info-heading,
   .price {
@@ -988,31 +1001,45 @@ input:checked ~ label {
   .nav-nav {
     padding-right: 6rem;
 
-    position: relative;
+    /* position: relative; */
   }
 
-  .nav__list {
+  .nav__list,
+  .nav__list-container {
     /* display: flex; */
     flex-direction: column;
 
-    background-color: #aab6d5;
-
     width: 30rem;
     position: absolute;
-    top: 80%;
-    right: -35px;
+    top: 78%;
+    right: 0;
     height: 89.8vh;
 
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0;
 
-    display: none;
+    /* display: none; */
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .nav__list {
+    top: 0;
+    align-items: flex-end;
+    background-color: #f5f4f9;
+    opacity: 0;
+    visibility: hidden;
+    /* display: none; */
+    transform: translateX(100%);
+    transition: 0.3s all;
+
+    z-index: 100;
   }
 
   .nav__list a {
-    padding-left: 2.4rem;
-    transform: translateX(-100%);
+    font-size: 1.8rem;
+    padding: 0.8rem 3.2rem;
   }
 
   /* #check {
@@ -1022,14 +1049,17 @@ input:checked ~ label {
   } */
 
   #check:checked ~ .nav-nav .nav__list {
-    z-index: 20;
-    opacity: 1;
     display: flex;
+    z-index: 20;
+    visibility: visible;
+    opacity: 1;
     /* background-color: var(--color-light-white); */
+    right: 0;
+    transform: translateX(0%);
   }
 
-  #check:checked ~ .nav-nav .nav__list a {
-    transform: translateX(0%);
+  #check:checked ~ .nav-nav .nav__list-container {
+    z-index: 10;
   }
 
   #check:checked ~ .overlay {
@@ -1089,6 +1119,31 @@ input:checked ~ label {
   /* mobile__actions */
   .mobile__actions {
     display: flex;
+  }
+
+  .overflow {
+    overflow: hidden;
+  }
+
+  /* mobile actions */
+  .nav__list .mobile__actions {
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__list .mobile__actions .btn-logIn {
+    display: none;
+  }
+
+  /* incase two button */
+  .nav__list .mobile__actions > * {
+    /* width: 100%; */
+  }
+
+  .action {
+    display: none;
   }
 }
 
@@ -1155,6 +1210,16 @@ input:checked ~ label {
   nav {
     padding: 1.6rem 3.2rem;
   }
+
+  /* update */
+
+  .overlay {
+    top: 13.2%;
+  }
+
+  .nav__list-container {
+    top: 90%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1175,6 +1240,12 @@ input:checked ~ label {
   .newsLetter-main__box {
     width: auto;
   }
+
+  .main__des-heading {
+    font-size: 3rem;
+  }
+
+  /* update */
 }
 
 @media (max-width: 500px) {
@@ -1196,6 +1267,20 @@ input:checked ~ label {
 
   .newsLetter__heading {
     font-size: 3rem;
+  }
+
+  /*  */
+  .nav__list-container {
+    top: 83%;
+  }
+
+  /* update */
+  /* .nav__list-container {
+    top: 94%;
+  } */
+
+  .main__des-heading {
+    font-size: 2.4rem;
   }
 }
 
@@ -1257,6 +1342,21 @@ input:checked ~ label {
   .newsLetter-main__box .btn-subscribe {
     border-radius: 5px;
   }
+
+  /* update */
+
+  .nav__list-container {
+    top: 83%;
+  }
+
+  .nav__list a {
+    font-size: 2rem;
+  }
+  /*  */
+  .main__des {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1267,6 +1367,10 @@ input:checked ~ label {
 
   .section__card-heading {
     font-size: 3.4rem;
+  }
+
+  .nav__list-container {
+    top: 77%;
   }
 }
 
