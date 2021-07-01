@@ -1246,6 +1246,10 @@ input:checked ~ label {
   }
 
   /* update */
+
+  .section__card {
+    margin-top: -10rem;
+  }
 }
 
 @media (max-width: 500px) {
