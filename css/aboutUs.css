@@ -126,9 +126,25 @@ body {
     }
 
     .about_us .about_us_right .ellipse_right {
-        right: 0;
+        top: -200px;
+        right: -7rem;
+        margin-right: 4rem;
+    }
+    .about_us .about_us_right .ellipse_right svg {
+        width: 50%;
     }
 
+    .about_us .about_us_right .about_us_right_head {
+        text-align: start;
+    }
+
+    .our_story {
+        padding: 2rem;
+    }
+
+    .why_sikaai_section {
+        margin-top: 3rem;
+    }
 
     .why_sikaai {
         flex-direction: column;
@@ -137,5 +153,27 @@ body {
 
     .why_sikaai .why_sikaai_desc {
         width: 80%;
+    }
+    .ellipse_left {
+        left: -1.5rem;
+    }
+
+   .ellipse_left img {
+        width: 20%;
+    }
+    .about_sign {
+        margin-top: 2rem;
+    }
+
+    .sign_us {
+        margin: 0.5rem 1rem 0 1rem;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
+    .sign_us span {
+        font-size: 2rem;
+    }
+    .sign_us p {
+        font-size: 1.3rem;
     }
 }

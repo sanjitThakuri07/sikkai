@@ -241,7 +241,7 @@ body {
   }
 
   .grow_skills {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
@@ -281,7 +281,43 @@ body {
   #svg-rect {
     top: -45%;
   }
+  .ellipse-1, .ellipse-2, .ellipse-3, .ellipse-4 {
+    width: 20%;
+  }
+  .grow_skills  {
+    padding: 0 5% 0 5%;
+  }
+  .grow_skills .grow_skills_left h2 {
+    font-size: 3.5rem;
+  }
+  .grow_skills .grow_skills_left p {
+    text-align: start;
+    letter-spacing: 0.2rem;
+  }
+  .grow_skills_left a {
+    padding: 1.5rem 2.5rem;
+    border-radius: 40px;
+  }
+
+  .popular_categories .categories_text .category_head {
+    font-size: 2.5rem;
+  }
+
+  .popular_categories .categories_text {
+    text-align: justify;
+  }
+  .popular_courses .courses_text {
+    text-align: justify;
+  }
+  .popular_courses .courses_text .course_head {
+    font-size: 2.5rem;
+  }
+  .courses-sign-up .sign-up-head {
+    text-align: start;
+    font-size: 2.5rem;
+  }
 } 
+
  @media screen and (max-width:310px) {
   .courses-sign-up .input .subscribe_btn {
     right: 5%;
