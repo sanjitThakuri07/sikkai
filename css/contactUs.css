@@ -172,12 +172,13 @@ body {
 
         .contact-us {
             flex-direction: column;
-            top: 90%;
+            top: 100%;
         }
 
         .contact-us .contact-us-left {
             border-radius: 20px 20px 0px 0;
         }
+        
         .contact .contact-us-right {
             border-radius: 0 0 20px 20px;
         }
@@ -196,6 +197,28 @@ body {
 }
 
 @media screen and (max-width:600px) {
-    
+    .chat-with-sikaai {
+        display: none;
+    }
+    .contact-us {
+        box-shadow: none;
+    }
+
+    .contact-us .contact-us-left {
+        background-color: #fff;
+        color: #111;
+    }
+
+    .contact-us .contact-us-left .contact-us-title {
+        color: #585FCD;
+        /* text-align: center; */
+    }
+    .contact-us .contact-us-left .sikaai-dot-com .sikaai-dot-com-title, .contact-us .contact-us-left .contact-us-left-address .address-title, .contact-us .contact-us-left .phone .phone-title {
+        font-size: 3rem;
+    }
+    #svg-messenger {
+        right: 5%;
+        top: 40%;
+    }
 }
 
