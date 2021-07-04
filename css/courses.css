@@ -35,6 +35,8 @@ body {
 }
 .grow_skills_left h2 {
   letter-spacing: 0.2rem;
+  /* updated */
+  font-size: 3.4rem;
 }
 .grow_skills_left a {
   text-decoration: none;
@@ -84,7 +86,7 @@ body {
   padding: 0 5%;
 }
 .popular_categories .categories_text .category_head {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
 }
@@ -149,7 +151,7 @@ body {
 }
 
 .popular_courses .courses_text .course_head {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
 }
@@ -322,11 +324,13 @@ body {
   #svg-rect {
     top: -45%;
   }
-<<<<<<< HEAD
-  .ellipse-1, .ellipse-2, .ellipse-3, .ellipse-4 {
+  <<<<<<< HEAD .ellipse-1,
+  .ellipse-2,
+  .ellipse-3,
+  .ellipse-4 {
     width: 20%;
   }
-  .grow_skills  {
+  .grow_skills {
     padding: 0 5% 0 5%;
   }
   .grow_skills .grow_skills_left h2 {
@@ -358,12 +362,10 @@ body {
     text-align: start;
     font-size: 2.5rem;
   }
-} 
+}
 
- @media screen and (max-width:310px) {
-=======
-
-  .popular_categories .categories,
+@media screen and (max-width: 310px) {
+  ======= .popular_categories .categories,
   .popular_courses .courses {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -381,8 +383,10 @@ body {
   }
 }
 @media screen and (max-width: 310px) {
->>>>>>> 4ebb3b4c0c288d84cd3d150223a24366276b3662
-  .courses-sign-up .input .subscribe_btn {
+  >>>>>>>4ebb3b4c0c288d84cd3d150223a24366276b3662
+    .courses-sign-up
+    .input
+    .subscribe_btn {
     right: 5%;
   }
 }
